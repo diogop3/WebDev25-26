@@ -28,14 +28,14 @@ html{
 /* Challenge 12: When the visitor moves their mouse over images inside of the element with an id of firstGallery,
                  apply some type of styling using the filter( ) effect
 */
-#firstGallery:hover{
+#firstGallery img:hover{
     filter: brightness(50%);
 }
 
 /* Challenge 13: When the visitor moves their mouse over images inside of the element with an id of secondGallery,
                  apply some other type of styling.
 */
-#secondGallery:hover{
+#secondGallery img:hover{
     filter: contrast(50%);
 }
 
