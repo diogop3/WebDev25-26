@@ -30,6 +30,8 @@ html,body{
 .gallery img{
   height:200px;
   border-radius:10px;
+  border: red 2px solid;
+  margin: 20px;
   box-shadow:2px 2px 2px black;
 }
 .alternate{ 
