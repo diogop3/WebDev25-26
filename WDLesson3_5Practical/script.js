@@ -4,12 +4,20 @@
       3) Display the results in the appropriate element
 */
 function recArea(){
-
+      let len= parseFloat(document.getElementById("l").value);
+      let wid= parseFloat(document.getElementById("w").value);
+      let op= document.getElementById("output");
+      let A= len * wid;
+      op.innerHTML= "The Area of rectangle is:" + A;
 }
 
 function recPerimeter(){
-
-}
+      let len= parseFloat(document.getElementById("l").value);
+      let wid= parseFloat(document.getElementById("w").value);
+      let op= document.getElementById("output");
+      let P= 2*(len+wid);
+      op.innerHTML= "The Perimeter of rectangle is:" + P;
+      }
 
 
 /* Challenge 4: Complete the area and circumference functions below for the circle.  Guidelines,
@@ -20,10 +28,18 @@ function recPerimeter(){
 let pi = 3.1415926;
 
 function cirArea(){
+      let r= parseFloat(document.getElementById("rad").value);
+      let op= document.getElementById("output");
+      let A= pi*(r**2);
+      op.innerHTML= "The Area of circle is:" + A;
 
 }
 
 function cirPerimeter(){
+      let r= parseFloat(document.getElementById("rad").value);
+      let op= document.getElementById("output");
+      let C= 2*pi*r;
+      op.innerHTML="The Circumference of circle is:" + C;
 
 }
 
