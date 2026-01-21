@@ -21,10 +21,10 @@ function slope(){
 
 // Challenge 6:  Create the function for the BMI program.  Refer to the resource link in the HTML for assistance.
 function bmi(){
-    let h1= parseFloat(document.getElementById("height").value);
-    let w1= parseFloat(document.getElementById("weight").value);
+    let h= parseFloat(document.getElementById("height").value);
+    let w= parseFloat(document.getElementById("weight").value);
     let op= document.getElementById("output");
-    let bmi= w1 / (h1**2);
+    let bmi= w / (h**2);
     op.innerHTML=`The BMI based on the height and weight is ${bmi}`;
 
 }
