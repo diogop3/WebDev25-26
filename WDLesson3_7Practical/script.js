@@ -22,7 +22,8 @@ function compoundInterest(){
       let r = parseFloat(document.getElementById("R").value);
       let n = parseFloat(document.getElementById("N").value);
       let t = parseFloat(document.getElementById("T").value);
-      let A = p (1 + (r/n))**(n*t);
+      let A = p * Math.pow((1 + (r/n)), n*t);
+      A.toFixed(2);
       let op = document.getElementById("output");
       op.innerHTML=`The Compound Interest final amount is ${A}`;
 }
