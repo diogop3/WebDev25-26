@@ -13,4 +13,27 @@ Guideline:
 
 Use past examples, classwork and practicals to assist you in completing this practical.
 */
+function calculateBMI() {
+    let weight = parseFloat(document.getElementById("weightInput").value);
+    let height = parseFloat(document.getElementById("heightInput").value);
+    let bmi = weight / (height) ** 2 * 10000;
+    let imageFile = 'bmi.jpg';
+    let op = document.getElementById("output");
+
+    if (bmi < 18.5) {
+        status = 'Underweight';
+        imageFile = 'underweight.png';
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        status = 'Healthy Weight';
+        imageFile = 'healthyweight.png';  
+    } else if (bmi >= 25 && bmi < 29.9) {
+        status = 'Overweight';
+        imageFile = 'overweight.png'; 
+    } else {
+        status = 'Obese';
+        imageFile = 'obeseweight.png';
+    }
+
+    op.innerHTML = `Your BMI is ${bmi.toFixed(2)} (${status}) <br><img src="${imageFile}" alt="${status}">`;
+}      
 
