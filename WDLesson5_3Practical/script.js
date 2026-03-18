@@ -11,6 +11,17 @@
 */
 
 function balance(){
+        let p = parseFloat(document.getElementById("p").value);
+        let r = parseFloat(document.getElementById("r").value) / 100;
+        let t = parseInt(document.getElementById("t").value);
+        let n = parseInt(document.getElementById("n").value);
+        
+        let table = "<tr><th>Year</th><th>Balance</th></tr>";
+        for(let i = 1; i <= t; i++){
+                let a = p * Math.pow((1 + r/n), n*i);
+                table += `<tr><td>${i}</td><td>$${a.toFixed(2)}</td></tr>`;
+        }
+        document.getElementById("balance").innerHTML = table;
 
 
 }
@@ -24,3 +35,4 @@ function balance(){
               c. n = 3 then the interest is compounded quarterly
               d. n = 2 then the interest is compounded bi-yearly
 */ 
+
