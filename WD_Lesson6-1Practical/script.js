@@ -35,11 +35,10 @@ function init(){
   for(let i = 0; i < meat_images.length; i++){
     build += `
       <div class="card">
-        <img src="images/${meat_images[i]}" alt="${meat_titles[i]}">
         <h3>${meat_titles[i]}</h3>
-        <p>$${meat_prices[i].toFixed(2)}</p>
-      </div>
-    `;
+        <img src="images/${meat_images[i]}" alt="${meat_titles[i]}">
+        <h2>$${meat_prices[i].toFixed(2)}</h2>
+      </div>`;
   }
   m.innerHTML = build;
 
@@ -49,9 +48,9 @@ function init(){
   for(let i = 0; i < seafood_images.length; i++){
     build += `
       <div class="card">
-        <img src="images/${seafood_images[i]}">
         <h3>${seafood_titles[i]}</h3>
-        <p>$${seafood_prices[i].toFixed(2)}</p>
+        <img src="images/${seafood_images[i]}">
+        <h2>$${seafood_prices[i].toFixed(2)}</h2>
       </div>
     `;
   }
@@ -62,9 +61,9 @@ function init(){
   for(let i = 0; i < dessert_images.length; i++){
     build += `
       <div class="card">
-        <img src="images/${dessert_images[i]}" alt="${dessert_titles[i]}">
         <h3>${dessert_titles[i]}</h3>
-        <p>$${dessert_prices[i].toFixed(2)}</p>
+        <img src="images/${dessert_images[i]}" alt="${dessert_titles[i]}">
+        <h2>$${dessert_prices[i].toFixed(2)}</h2>
       </div>
     `;
   }
