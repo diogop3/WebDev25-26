@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD_6.7 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+   </head>
+
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1>NYC Open Data</h1>
+          <h2>Filtering Motor Vehicle Collisions</h2>
+      </div>
+    </div>
+
+    <div class="container subbanner">
+      <div>
+        <p>This practical challenges students to provide various ways to filter  
+          Motor Vehicle Collisions retrieved from NYC Open Data.</p>
+        <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
+        <a class="button" target="_blank" href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data"
+"> Motor Vehicle Collisions Data</a>
+        <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
+       </div>
+    </div>
+
+    <div class="container">
+      <div id="leftPanel">
+      
+        <div class="card">
+          <h3>SEARCH By Contributing Factor</h3>
+          <input type="text" id="contributingFactor" placeholder="Enter Contributing Factor Vehicle">
+          <hr></hr>
+          <a class="button" onclick="filterByContributingFactor()"> Search </a>
+        </div>
+
+        <input type="text" id="onStreetName" placeholder="Enter On Street Name">
+        <input type="button" value="Search" onclick="filterByOnStreetName()">
+        <hr></hr>
+        
+        <input type="text" id="typeVehicleInvolved" placeholder="Enter Type of Vehicle Involved">
+        <input type="button" value="Search" onclick="filterByTypeVehicleInvolved()">
+        <hr></hr>
+
+        <input type="text" id="personsKilled" placeholder="Enter Persons Killed">
+        <input type="button" value="Search" onclick="filterByPersonsKilled()">
+        <hr></hr>
+
+        <input type="text" id="personsInjured" placeholder="Enter Persons Injured">
+        <input type="button" value="Search" onclick="filterByPersonsInjured()">
+        <hr></hr>
+        
+        <input type="text" id="collisionId" placeholder="Enter Collision ID">
+        <input type="button" value="Search" onclick="filterByCollisionId()">
+        <hr></hr>
+
+
+      </div>
+
+      <div class="card" id="rightPanel">
+        <h1>Motor Vehicle Collisions</h1>
+        <div id="result" class="container"></div>
+        <div id="output" class="container"></div>
+      </div>
+      
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>Lesson 6.7 Practical</h3>
+    </div>  
+  </body>
+</html>
